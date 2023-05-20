@@ -10,18 +10,22 @@ urlpatterns = [
     # name the URL
 
     # path for about view
+    path(route='about/', view=views.about, name='about'),
 
     # path for contact us view
+     path(route = 'contact/', view = views.contact, name='contact'),
 
     # path for registration
+    path(route='add_review/<int:dealer_id>/', view=views.add_review, name='add_review'),
 
-    # path for login
+    path('login/', views.login_request, name='login'),
 
     # path for logout
 
     path(route='', view=views.get_dealerships, name='index'),
 
     # path for dealer reviews view
+    path('registration/', views.registration_request, name='registration'),
 
     # path for add a review view
 
